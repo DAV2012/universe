@@ -5,7 +5,7 @@ import Ring from "../ui/ring/ring";
 
 export default function Page() {
   return (
-    <div className="flex h-screen flex-row -mt-32 overflow-hidden">
+    <div className="flex  flex-row ">
             <Ring></Ring>
     </div>
   );
