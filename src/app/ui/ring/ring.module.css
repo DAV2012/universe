@@ -2,7 +2,6 @@
     position: relative;
     height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
     width: 100vw; /* Asegura que ocupe todo el ancho de la ventana */
-    background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +9,6 @@
 
 .center {
     position: absolute;
-    background-color: red;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centra el elemento completamente */
@@ -19,24 +17,9 @@
 .ring {
     box-sizing: border-box;
     border-width: 3px;
-    position: absolute;
+
     border-style: solid; /* Asegura que el borde sea visible */
     border-color: aliceblue;
     border-radius: 50%; /* Hace que el borde sea circular */
-}
 
-.ring-1 {
-    height: 200px;
-    width: 200px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra el anillo */
-}
-
-.ring-2 {
-    height: 300px;
-    width: 300px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra el anillo */
 }
