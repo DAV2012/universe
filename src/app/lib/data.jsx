@@ -7,7 +7,7 @@ export const meteoras =[
         dayLength:"ETHEREON",
         avgTemperature:"ETHEREON",
         climate:"ETHEREON",
-        src:"/Purple-Planet.png"
+        src:"/meteora1.png"
     },
     {
         id:"ETHEREON",
@@ -17,18 +17,7 @@ export const meteoras =[
         dayLength:"ETHEREON",
         avgTemperature:"ETHEREON",
         climate:"ETHEREON",
-        src:"/Purple-Planet.png"
-    }
-    ,
-    {
-        id:"ETHEREON",
-        name:"ETHEREON",
-        galaxy:"Andromeda-v",
-        diameter:"ETHEREON",
-        dayLength:"ETHEREON",
-        avgTemperature:"ETHEREON",
-        climate:"ETHEREON",
-        src:"/Purple-Planet.png"
+        src:"/meteora2.png"
     },
     {
         id:"ETHEREON",
@@ -38,6 +27,28 @@ export const meteoras =[
         dayLength:"ETHEREON",
         avgTemperature:"ETHEREON",
         climate:"ETHEREON",
-        src:"/Purple-Planet.png"
+        src:"/meteora3.png"
+    },
+    {
+        id:"ETHEREON",
+        name:"ETHEREON",
+        galaxy:"Andromeda-v",
+        diameter:"ETHEREON",
+        dayLength:"ETHEREON",
+        avgTemperature:"ETHEREON",
+        climate:"ETHEREON",
+        src:"/meteora4.png"
+    },
+    {
+        id:"ETHEREON",
+        name:"ETHEREON",
+        galaxy:"Andromeda-v",
+        diameter:"ETHEREON",
+        dayLength:"ETHEREON",
+        avgTemperature:"ETHEREON",
+        climate:"ETHEREON",
+        src:"/meteora5.png"
     }
+
+
 ]

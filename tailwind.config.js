@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         "rosa-400": "#E52996",
+        "prymary": "#1C1C22"
       }
     },
   },

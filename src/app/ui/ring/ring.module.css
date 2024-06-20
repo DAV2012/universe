@@ -1,10 +1,15 @@
+/* ring.module.css */
 .container {
     position: relative;
-    height: calc(100vh - 8rem); /* Asegura que ocupe toda la altura de la ventana */
-    width: 100vw; /* Asegura que ocupe todo el ancho de la ventana */
+    box-sizing: border-box;
+    min-height: calc(100vh + 14rem); /* Asegura que ocupe toda la altura de la ventana */
+    width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #1C1C22;
+    border-radius: 50%; /* Hace que el borde sea circular */
+    
 }
 
 .center {
@@ -12,14 +17,27 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centra el elemento completamente */
+    border-radius: 50%;
 }
 
 .ring {
     box-sizing: border-box;
-    border-width: 3px;
-
-    border-style: solid; /* Asegura que el borde sea visible */
-    border-color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 50%; /* Hace que el borde sea circular */
+}
 
+.gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#272731 25%, rgba(39, 39, 49, 0%) 50%, #272731 75%, rgba(39, 39, 49, 0%) 100%);
+    mask: radial-gradient(farthest-side, transparent calc(100% - 3px), black 0);
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), black 0);
 }
