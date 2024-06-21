@@ -1,13 +1,14 @@
-import Image from "next/image";
-import styles from "@/app/ui/home.module.css";
-import Link from "next/link";
-import Ring from "../ui/ring/ring";
-import CardInfo from "../ui/meteora/card";
+import Ring from "@/app/ui/ring/ring";
+import CardInfo from "@/app/ui/meteora/card";
+import Stars from "@/app/ui/stars/stars";
+import StarCanvas from "@/app/ui/stars/stars";
 
 export default function Page() {
   return (
     <div className="flex flex-col items-center overflow-hidden">
+            
             <CardInfo/>
+         
             <Ring></Ring>
     </div>
   );

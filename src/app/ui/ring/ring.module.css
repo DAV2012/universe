@@ -2,34 +2,31 @@
 .container {
     position: relative;
     box-sizing: border-box;
-    min-height: calc(100vh + 14rem); /* Asegura que ocupe toda la altura de la ventana */
     width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1C1C22;
-    border-radius: 50%; /* Hace que el borde sea circular */
-    
-}
+    margin-top: -6rem;
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra el elemento completamente */
-    border-radius: 50%;
 }
 
 .ring {
     box-sizing: border-box;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 50%; /* Hace que el borde sea circular */
+    border-color: red;   
 }
 
-.gradient::before {
+.imgPlanet {
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.withGradient::before {
     content: "";
     position: absolute;
     top: 0;

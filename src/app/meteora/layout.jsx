@@ -14,7 +14,10 @@ export default function Layout({ children }) {
   return (
     <>
         <SideNav/>
+       
         <main className={mulish.className}>{children}</main>
+
+        
     </>
   );
 }

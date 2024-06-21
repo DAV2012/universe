@@ -89,6 +89,7 @@ export default function Home() {
           width={0}
           height={0}
           sizes="fill"
+          priority={true}
           style={{
             zIndex:1,
             width: "auto",
