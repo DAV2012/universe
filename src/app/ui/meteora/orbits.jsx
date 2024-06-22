@@ -28,7 +28,7 @@ export default function Orbits() {
       <>
         <CardInfo/>
         <StarCanvas></StarCanvas>
-        <Orbit distance={distance} rotate={0} meteoras={meteoras} distanceOrbit={maxOrbit}>
+        <Orbit distance={distance} rotate={0} meteoras={meteoras} distanceOrbit={maxOrbit} count={count}> 
           <MeteoraPrincipal
             id="after"
             meteora={meteoras[count > 0 ? count - 1 : meteoras.length - 1]}
@@ -41,9 +41,9 @@ export default function Orbits() {
           <MeteoraPrincipal
             id="select"
             meteora={meteoras[count]}
-            distanceOrbit={600}
+            distanceOrbit={700}
             height="400px"
-            traslate={`translate(-50%, -45%) rotate(${20*count}deg)`}
+            traslate={`translate(-50%, ${-3}%) rotate(${90*count}deg)`}
             rotate="0deg"
           />
           <MeteoraPrincipal

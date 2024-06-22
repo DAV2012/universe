@@ -1,21 +1,41 @@
 import styles from "@/app/ui/orbits/orbits.module.css";
 import Image from "next/image";
 import StarCanvas from "../stars/stars";
+import { useEffect } from "react";
+import { useState } from "react";
 
-export function Orbit({children, distance, rotate,meteoras, distanceOrbit}) {
+export function Orbit({children, distance, rotate,meteoras, distanceOrbit,count}) {
 
+  const [filteredArray, setFilteredArray] = useState([]);
 
-  const maxOrbit = distance* meteoras.length*0.3 + distance
+  useEffect(() => {
 
+    // Filtro cíclico para manejar casos en los límites del array
+    const newArray = meteoras.filter((_, index) => {
+      const length = meteoras.length;
+      const prevIndex = (count - 1 + length) % length;
+      const nextIndex = (count + 1) % length;
+      const exclude = index !== prevIndex && index !== count && index !== nextIndex;
+
+      return exclude;
+    });
+
+    setFilteredArray(newArray);
+    console.log('Filtered Array:', newArray);
+  }, [count, meteoras]);
+
+  const maxOrbit = distance * meteoras.length * 0.3 + distance
+
+  console.log(filteredArray)
   return (
     <div
       id="Conteiner"
       className={styles.container}
-      style={{ height: maxOrbit > 0 ? maxOrbit : 0 }}
+      style={{ height: maxOrbit > 0 ? maxOrbit*0.7 : 0 }}
     >
       {children}
-      {distance > 0 &&
-        meteoras.map((meteora, index) => {
+      {distance > 0  &&
+        filteredArray.map((meteora, index) => {
           const size = distance + index * distance * 0.3;
           rotate = Math.random() * 360;
 
@@ -75,7 +95,6 @@ export function MeteoraPrincipal({id, meteora,distanceOrbit, height, onClick, tr
           sizes="cover"
           style={{
             height: height,
-            widows:height,
             transform: traslate,
             border: "none",
             backgroundImage: "none",
