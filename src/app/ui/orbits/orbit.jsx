@@ -46,7 +46,7 @@ export function Orbit({children, distance, rotate,meteoras, distanceOrbit,count}
               style={{
                 height: `${size}px`,
                 width: `${size}px`,
-                transform: `rotate(${rotate}deg)`,
+                transform: `rotate(${ rotate> 300 || rotate< 55 ? 180 : rotate   }deg)`,
                 zIndex: 0,
               }}
             >
@@ -69,7 +69,7 @@ export function Orbit({children, distance, rotate,meteoras, distanceOrbit,count}
   );
 }
 
-export function MeteoraPrincipal({id, meteora,distanceOrbit, height, onClick, traslate, rotate}) {
+export function MeteoraPrincipal({id, meteora,distanceOrbit, height, onClick, traslate, rotate,left}) {
 
   return (
 
@@ -81,6 +81,7 @@ export function MeteoraPrincipal({id, meteora,distanceOrbit, height, onClick, tr
           width: distanceOrbit,
           rotate:rotate,
           zIndex:2,
+          left:left
 
         }}
       >
@@ -97,6 +98,7 @@ export function MeteoraPrincipal({id, meteora,distanceOrbit, height, onClick, tr
             height: height,
             transform: traslate,
             border: "none",
+
             backgroundImage: "none",
             zIndex:10
           }}

@@ -5,6 +5,7 @@ import { MeteoraPrincipal, Orbit } from "../orbits/orbit";
 import { useState } from "react";
 import StarCanvas from "../stars/stars";
 import CardInfo from "../card";
+import Estrellas from "../estrellas/estrellas";
 
 
 
@@ -27,14 +28,15 @@ export default function Orbits() {
     return (
       <>
         <CardInfo/>
-        <StarCanvas></StarCanvas>
+        {/* <StarCanvas></StarCanvas> */}
+        <Estrellas/>
         <Orbit distance={distance} rotate={0} meteoras={meteoras} distanceOrbit={maxOrbit} count={count}> 
           <MeteoraPrincipal
             id="after"
             meteora={meteoras[count > 0 ? count - 1 : meteoras.length - 1]}
-            distanceOrbit={maxOrbit}
+            distanceOrbit={maxOrbit/2}
             height="200px"
-            traslate={`translate(-50%, -50%) rotate(${50*count}deg)`}
+            traslate={`translate(-50%, ${-150}%) rotate(${50*count}deg)`}
             rotate="-90deg"
             onClick={handleSelect}
           />
@@ -49,9 +51,9 @@ export default function Orbits() {
           <MeteoraPrincipal
             id="before"
             meteora={meteoras[count < meteoras.length - 1 ? count + 1 : 0]}
-            distanceOrbit={maxOrbit}
+            distanceOrbit={maxOrbit/2}
             height="200px"
-            traslate={`translate(-50%, -50%) rotate(${50*count}deg)`}
+            traslate={`translate(-50%, ${-150}%) rotate(${50*count}deg)`}
             rotate="90deg"
             onClick={handleSelect}
           />

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-row p-24 overflow-hidden">
+    <main className="flex min-h-screen lg:flex-row flex-col lg:p-24 lg:overflow-hidden overflow-x-hidden">
       <div className="w-full h-full p-16 self-center">
         <h1 className={"font-extrabold  text-6xl leading-tight tracking-tight"}>
           UX/UI Design Mastery Course
