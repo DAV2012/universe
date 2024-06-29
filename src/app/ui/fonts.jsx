@@ -13,5 +13,5 @@ export const roboto_mono = Roboto_Mono({
 export const mulish =Mulish({
     subsets:['latin'],
     display:'swap',
-    weight:['800','600','500','300']
+    weight:['800','600','500','300', '200']
 })
