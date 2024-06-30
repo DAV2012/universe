@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "@/app/ui/globals.css";
 import { mulish } from "@/app/ui/fonts";
 import SideNav from "../ui/sidenav";
+import clsx from "clsx";
 
 
 
@@ -13,9 +14,9 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <>
+
         <SideNav/>
-       
-        <main className={mulish.className}>{children}</main>
+        <main className={clsx(mulish.className, 'flex m-auto')} >{children}</main>
 
         
     </>

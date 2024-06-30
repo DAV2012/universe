@@ -1,4 +1,5 @@
 import styles from "@/app/ui/orbit/orbit.module.css";
+import clsx from "clsx";
 import Image from "next/image";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -66,38 +67,33 @@ export function Orbit({ children, distance, rotate, data, distanceOrbit, count }
   );
 }
 
-export function MeteoraPrincipal({id, meteora,distanceOrbit, height, onClick, traslate, rotate,left}) {
+export function MeteoraPrincipal({id, meteora,distanceOrbit, height, onClick, traslate, rotate}) {
 
 
   return (
 
       <div
 
-        className={`${styles.ring} ${rotate}`}
+        className={clsx(styles.ring,rotate)}
         style={{
           height: distanceOrbit,
           width: distanceOrbit,
-          zIndex:2,
-          left:left
-
         }}
       >
         <Image
           id={id}
           onClick={onClick}
           src={meteora.src}
-          className={styles.imgPlanet}
+          className={clsx(styles.imgPlanet, height)}
           alt={meteora.alt}
           width={0}
           height={0}
           sizes="cover"
           priority={true}
           style={{
-            height: height,
             transform: traslate,
             border: "none",
             backgroundImage: "none",
-            zIndex:10,
             filter: `drop-shadow(-8px -8px 15px ${meteora.color})`
           }}
         />

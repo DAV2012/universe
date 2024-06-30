@@ -86,30 +86,6 @@ export const galaxy = [
         alt: "planeta"
     },
     {
-        id: "solaris",
-        name: "SOLARIS",
-        galaxy: "Milky Way",
-        diameter: "1,392,700 km",
-        dayLength: "25 Earth hours",
-        avgTemperature: "5°C to 50°C",
-        climate: "Sunny",
-        color: "#093D68",
-        src: "/galaxy-blue.png",
-        alt: "planeta"
-    },
-    {
-        id: "verdantia",
-        name: "VERDANTIA",
-        galaxy: "Andromeda-IX",
-        diameter: "6,371 km",
-        dayLength: "22 Earth hours",
-        avgTemperature: "0°C to 20°C",
-        climate: "Arctic",
-        color: "#DD5A29",
-        src: "/galaxy-red.png",
-        alt: "planeta"
-    },
-    {
         id: "verdantia",
         name: "VERDANTIA",
         galaxy: "Andromeda-IX",

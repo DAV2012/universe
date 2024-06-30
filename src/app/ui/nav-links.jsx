@@ -2,22 +2,21 @@
 import clsx from "clsx"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import styles from '@/app/ui/home.module.css'
 
 const links = [
     {   name:"Home",
         href:"/"
     },
-    {   name:"About",
-        href:"/about"
-    },
-    {   name:"Contact",
-        href:"/contact"
+    {   name:"Galaxies",
+        href:"/galaxies"
     },
     {   name:"Meteora",
         href:"/meteora"
     },
-    {   name:"Galaxies",
-        href:"/galaxies"
+
+    {   name:"About",
+        href:"/about"
     }
 ]
 
@@ -25,8 +24,9 @@ export default function NavLinks(){
     const pathname  = usePathname ();
 
     return(
-        <nav 
-        className='flex justify-evenly text-lg items-center py-12 font-extralight transition-all' id="nav-link"
+        <nav
+        id="nav-links"
+        className='flex justify-evenly text-xs items-center text-center p-10 font-extralight'
         
         >
             {links.map(({name,href})=>{
@@ -34,9 +34,10 @@ export default function NavLinks(){
                     <Link
                         key={name}
                         href={href}
-                        className={clsx('text-xs transition-all',
+                        className={clsx('w-1/5',
                             {
-                                'text-white/90 md:text-3xl text-sm py-0 transition-all':pathname === href,
+                                'text-white/90 py-0':pathname === href,
+                                [styles.selectItem]:pathname === href
 
                             }
                         )}

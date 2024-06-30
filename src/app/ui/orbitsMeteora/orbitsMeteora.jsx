@@ -3,13 +3,13 @@
 
 import { useState } from "react";
 import CardInfo from "@/app/ui/card.jsx";
-import Estrellas from "@/app/ui/stars/stars.jsx";
 import { MeteoraPrincipal, Orbit } from "@/app/ui/orbit/orbit";
 import { useEffect } from "react";
+import Stars from "@/app/ui/stars/stars.jsx";
 
 
 
-export default function Orbits({data}) {
+export default function OrbitsMeteoras({data}) {
 
 
 
@@ -42,7 +42,7 @@ export default function Orbits({data}) {
       <>
         <CardInfo data={data[count]}/>
 
-        <Estrellas/>
+        <Stars/>
         <Orbit 
           distance={distance} 
           rotate={0} 
@@ -53,8 +53,8 @@ export default function Orbits({data}) {
               id="after"
               meteora={data[count > 0 ? count - 1 : data.length - 1]}
               distanceOrbit={distance*data.length*0.5}
-              height="30%"
-              traslate={`translate(-50%, ${-150}%) rotate(${10*count}deg)`}
+              height="h-3/5 sm:h-2/6"
+              traslate={`translate(-50%, ${-100}%) rotate(${10*count}deg)`}
               rotate="-rotate-90"
               onClick={handleSelect}
             />
@@ -62,15 +62,15 @@ export default function Orbits({data}) {
               id="select"
               meteora={data[count]}
               distanceOrbit={distance*data.length*0.5}
-              height= "70%"
-              traslate={`translate(-50%, ${-3}%) rotate(${10*count}deg)`}
+              height= "h-max sm:h-4/6"
+              traslate={`translate(-54%, ${-20}%) rotate(${10*count}deg)`}
             />
             <MeteoraPrincipal
               id="before"
               meteora={data[count < data.length - 1 ? count + 1 : 0]}
               distanceOrbit={distance*data.length*0.5}
-              height="30%"
-              traslate={`translate(-50%, ${-150}%) rotate(${10*count}deg)`}
+              height="h-3/5 sm:h-2/6"
+              traslate={`translate(-50%, ${-100}%) rotate(${10*count}deg)`}
               rotate="rotate-90"
               onClick={handleSelect}
             />

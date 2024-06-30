@@ -1,6 +1,6 @@
-import { Inter } from "next/font/google";
 import "@/app/ui/globals.css";
 import { mulish } from "@/app/ui/fonts";
+
 
 
 
@@ -10,6 +10,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
       <body className={mulish.className}>{children}</body>

@@ -40,12 +40,13 @@ const cleanup =(canvas)=>{
 
 
 const randomParticule = (canvas)=>{
+
   return {
     posicion: { x: randomNum(0, canvas.width), y: randomNum(0,canvas.height) },
     velocidad: { x: randomNum(-0.1, 0.1), y: randomNum(-0.1, 0.1)},
-    color: `rgba(255,255,255,${Math.random()})`,
+    color: `rgba(56,75,103,${Math.random()})`,
     points:4,
-    outerRadius: randomNum(4 , 2),
+    outerRadius: window.innerWidth >768 ? randomNum(3 , 0.5):randomNum(1 , 0.5),
   }
 }
 
@@ -84,7 +85,7 @@ export const loop = (indice, canvas, listaParticulas) => {
 
     cleanup(canvas);
 
-    indice >= 0 && listaParticulas.length < 200 && listaParticulas.push(randomParticule(canvas))
+    indice >= 0 && listaParticulas.length < 500 && listaParticulas.push(randomParticule(canvas))
 
     listaParticulas.forEach(particula => {
 

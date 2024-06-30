@@ -5,8 +5,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="flex min-h-screen lg:flex-row flex-col lg:p-24 lg:overflow-hidden overflow-x-hidden">
+
       <div className="w-full h-full p-16 self-center">
-        <h1 className={"font-extrabold  text-6xl leading-tight tracking-tight"}>
+        <h1 className={"font-extrabold text-white text-6xl leading-tight tracking-tight"}>
           UX/UI Design Mastery Course
         </h1>
         <p className={"font-medium text-xl"}>
@@ -14,7 +15,7 @@ export default function Home() {
           practical skills, working on real-life projects and assignments and
           creating impactful user experiences.
         </p>
-        <p className="my-20 font-semibold text-xl tracking-wide">
+        <p className="my-20 font-semibold text-white text-xl tracking-wide">
         More info at 
         <Link
          key={"meteora"}
@@ -28,6 +29,7 @@ export default function Home() {
         <Image
           src="/iPhone-13.png"
           alt="Celular iPhone-13"
+          priority
           width={0}
           height={0}
           sizes="cover"
@@ -41,6 +43,7 @@ export default function Home() {
         <Image
           src="/iPhone-13.png"
           alt="Celular iPhone-12"
+          priority
           width={0}
           height={0}
           sizes="fill"
@@ -56,6 +59,7 @@ export default function Home() {
         <Image
           src="/heart-icon-1.png"
           alt="Favorite"
+          priority
           width={0}
           height={0}
           sizes="fill"
@@ -71,6 +75,7 @@ export default function Home() {
         <Image
           src="/heart-icon-1.png"
           alt="Favorite"
+          priority
           width={0}
           height={0}
           sizes="fill"
@@ -86,10 +91,10 @@ export default function Home() {
         <Image
           src="/heart-icon-1.png"
           alt="Favorite"
+          priority
           width={0}
           height={0}
           sizes="fill"
-          priority={true}
           style={{
             zIndex:1,
             width: "auto",
@@ -100,6 +105,7 @@ export default function Home() {
           }} // opcional, puede no ser necesario
         />
         <div className={styles["bg-hero"]}></div>
+        
       </div>
     </main>
   );

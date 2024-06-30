@@ -1,20 +1,21 @@
+'use client'
 import { loop  } from "@/scripts/stars";
 import { useRef } from "react";
 import { useEffect } from "react"
 import styles from "@/app/ui/stars/stars.module.css"
 
-export default function Estrellas () {
+export default function Stars () {
     const canvasRef = useRef(null)
     
         useEffect(()=>{
             const canvas = canvasRef.current;
             let listaParticulas = [];
-            loop(100,canvas,listaParticulas)
+            loop(500,canvas,listaParticulas)
 
             
             const handleResize = () => {
                 listaParticulas=[]
-                loop(100,canvas,listaParticulas); // Redibuja las estrellas al cambiar el tamaño de la ventana
+                loop(500,canvas,listaParticulas); // Redibuja las estrellas al cambiar el tamaño de la ventana
               };
           
               window.addEventListener('resize', handleResize);

@@ -8,23 +8,29 @@
     filter: blur(4rem);
     z-index: 0; 
 }
-.bg-hero-container-heartIcon {
-    position: absolute;
-    transform: rotate(0);
-    border-radius:70px;
-    width: 60px;
-    height: 60px;
-    top: 50px;
-    z-index: 0; 
+
+.selectItem {
+
+    animation: bounce; 
+    animation-duration: 1s
 }
-.bg-hero-heartIcon {
-    position: absolute;
-    top: 0;
-    transform: rotate(0);
-    border-radius:50px;
-    background-color: #E52996;
-    width: 50px;
-    height: 50px;
-    filter: blur(0.5rem);
-    z-index: 1; 
+
+
+@keyframes bounce {
+    0% {font-size: 12px}
+    100% {font-size: 12px}
+
+}
+
+@media (min-width: 768px) {
+
+
+    .selectItem {
+        font-size: 24px;
+    }
+
+    @keyframes bounce {
+        0% {font-size: 12px}
+        100% {font-size: 24px}
+    }
 }

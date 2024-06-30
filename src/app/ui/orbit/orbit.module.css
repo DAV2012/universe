@@ -9,18 +9,16 @@
     padding-top: 3rem ;
     overflow: hidden;
     z-index: 3;
-
-
-
 }
 
 .ring {
     box-sizing: border-box;
     position: absolute;
     border-radius: 50%; /* Hace que el borde sea circular */
-    max-width: 90vw;
-    max-height: 90vw;
+    max-width: 95vw;
+    max-height: 95vw;
     transition: all 1s cubic-bezier(0, 0.55, 0.45, 1) 0s;
+    z-index: 2;
 }
 
 .imgPlanet {
@@ -30,8 +28,7 @@
     transform: translate(-50%, -50%);
     transition: all 1s cubic-bezier(0, 0.55, 0.45, 1) 0s;
     padding: 0.5rem;
-
-
+    z-index: 3;
 }
 
 .withGradient::before {
