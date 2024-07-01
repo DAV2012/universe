@@ -10,12 +10,12 @@ export default function Stars () {
         useEffect(()=>{
             const canvas = canvasRef.current;
             let listaParticulas = [];
-            loop(500,canvas,listaParticulas)
+            loop(200,canvas,listaParticulas)
 
             
             const handleResize = () => {
                 listaParticulas=[]
-                loop(500,canvas,listaParticulas); // Redibuja las estrellas al cambiar el tamaño de la ventana
+                loop(200,canvas,listaParticulas); // Redibuja las estrellas al cambiar el tamaño de la ventana
               };
           
               window.addEventListener('resize', handleResize);

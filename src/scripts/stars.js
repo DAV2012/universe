@@ -85,7 +85,7 @@ export const loop = (indice, canvas, listaParticulas) => {
 
     cleanup(canvas);
 
-    indice >= 0 && listaParticulas.length < 500 && listaParticulas.push(randomParticule(canvas))
+    indice >= 0 && listaParticulas.length < 200 && listaParticulas.push(randomParticule(canvas))
 
     listaParticulas.forEach(particula => {
 
