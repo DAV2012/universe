@@ -44,9 +44,9 @@ const randomParticule = (canvas)=>{
   return {
     posicion: { x: randomNum(0, canvas.width), y: randomNum(0,canvas.height) },
     velocidad: { x: randomNum(-0.1, 0.1), y: randomNum(-0.1, 0.1)},
-    color: `rgba(56,75,103,${Math.random()})`,
+    color: `rgba(255,255,255,${Math.random()})`,
     points:4,
-    outerRadius: window.innerWidth >768 ? randomNum(3 , 0.5):randomNum(1 , 0.5),
+    outerRadius: window.innerWidth >768 ? randomNum(4 , 0.5):randomNum(2 , 0.5),
   }
 }
 
