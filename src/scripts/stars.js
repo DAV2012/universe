@@ -46,7 +46,7 @@ const randomParticule = (canvas)=>{
     velocidad: { x: randomNum(-0.1, 0.1), y: randomNum(-0.1, 0.1)},
     color: `rgba(255,255,255,${Math.random()})`,
     points:4,
-    outerRadius: window.innerWidth >768 ? randomNum(4 , 0.5):randomNum(2 , 0.5),
+    outerRadius: randomNum(2 , 0.5),
   }
 }
 
